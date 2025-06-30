@@ -4,7 +4,9 @@ export default function SelectInput({ label, options, className, value, setValue
 	const handleSelect = (event) => {
 		setValue(event.target.value)
 	}
-	const labelId = label.toLowerCase().replace(/\s+/g, '_');
+	const labelId = label.toLowerCase()
+	.replace(/[^\w\s]|_/g, '')
+	.replace(/\s+/g, '_');
 	return (
 		<>
 		<label htmlFor={ labelId }>{ label }</label>

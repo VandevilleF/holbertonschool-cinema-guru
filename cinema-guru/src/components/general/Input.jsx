@@ -4,12 +4,16 @@ export default function Input({ label, type, className, value, setValue, icon, i
 	const handleInput = (event) => {
 		setValue(event.target.value)
 	}
-	const labelId = label.toLowerCase().replace(/\s+/g, '_');
+	const labelId = label.toLowerCase()
+	.replace(/[^\w\s]|_/g, '')
+	.replace(/\s+/g, '_');
 
 	return (
 		<>
+		<div className='label_block'>
 		{icon && <span>{ icon }</span> }
 		<label htmlFor={ labelId }>{ label }</label>
+		</div>
 		<input id={ labelId }
 		type={ type }
 		className={ className }

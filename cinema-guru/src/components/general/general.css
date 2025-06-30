@@ -1,6 +1,89 @@
+/*
 <FontAwesomeIcon icon="fa-solid fa-key" /> (password, sign in btn, sing up btn)
 <FontAwesomeIcon icon="fa-solid fa-user" /> (username)
 <FontAwesomeIcon icon="fa-solid fa-folder" /> (folder dashboard)
 <FontAwesomeIcon icon="fa-solid fa-star" /> (favorite)
 <FontAwesomeIcon icon="fa-solid fa-clock" /> (watch later)
 <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" /> (logout)
+*/
+/*Input Global Style*/
+.label_block {
+	display: flex;
+	align-items: flex-start;
+}
+
+span {
+	color: grey;
+}
+
+.input_content {
+	display: block;
+	border-style: none;
+	border-bottom: 1px solid #BB000E;
+	width: 20rem;
+}
+
+/* Input Username*/
+label[for="username"]{
+	padding: 0 0.25rem;
+}
+
+/*Input Password*/
+label[for="password"]{
+	padding: 0 0.25rem;
+}
+
+/* Select Input */
+.select_input {
+	display: flex;
+	border-bottom: 1px solid #BB000E;
+	width: 10rem;
+}
+
+label[for="sort"]{
+	display: flex;
+	padding: 0 0.25rem;
+}
+
+/* Button Authentification */
+.auth_button {
+	font-weight: 300;
+	background-color: #BB000E;
+	border-radius: 0;
+	padding: 0 0.5rem;
+}
+
+.auth_button svg {
+	padding: 0 0.25rem 0 0;
+}
+/* Button Tag */
+.tag_button {
+	font-weight: 300;
+	border-radius: 5rem;
+	border: #BB000E solid 1px;
+	padding: 0 0.75rem;
+}
+
+.tag_button:active {
+	background-color: #BB000E;
+
+}
+
+.tag_button svg {
+	padding: 0 0.25rem 0 0;
+}
+
+/* Search Bar */
+input[type="search"] {
+	border-radius: 5rem;
+	border: none;
+	color: lightgrey;
+}
+
+input[type="search"]:hover {
+	color: #fafafa;
+}
+
+/**/
+/**/
+/**/
