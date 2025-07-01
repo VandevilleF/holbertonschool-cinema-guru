@@ -1,4 +1,5 @@
 import './general.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Input({ label, type, className, value, setValue, icon, inputAttributes }) {
 	const handleInput = (event) => {
@@ -11,7 +12,7 @@ export default function Input({ label, type, className, value, setValue, icon, i
 	return (
 		<>
 		<div className='label_block'>
-		{icon && <span>{ icon }</span> }
+		{icon && <span><FontAwesomeIcon icon={icon} /></span> }
 		<label htmlFor={ labelId }>{ label }</label>
 		</div>
 		<input id={ labelId }

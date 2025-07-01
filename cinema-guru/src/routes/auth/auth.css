@@ -1,0 +1,33 @@
+.auth_form {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	border: #BB000E solid 1px;
+}
+
+.button_toggle {
+	display: flex;
+	width: 100%;
+}
+
+.button_panel {
+	flex: 1;
+	border-radius: 0;
+	background-color: #BB000E;
+	padding: 0.25rem 3.4rem;
+}
+
+.button_panel:active {
+	background-color: #E31C25;
+}
+
+.auth_inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+}
+
+.auth_button {
+	align-self: flex-end;
+}

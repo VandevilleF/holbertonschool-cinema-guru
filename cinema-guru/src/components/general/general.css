@@ -9,7 +9,8 @@
 /*Input Global Style*/
 .label_block {
 	display: flex;
-	align-items: flex-start;
+	align-self: flex-start;
+	margin-left: 3.5rem;
 }
 
 span {
@@ -21,6 +22,7 @@ span {
 	border-style: none;
 	border-bottom: 1px solid #BB000E;
 	width: 20rem;
+	margin-bottom: 1rem;
 }
 
 /* Input Username*/
