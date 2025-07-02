@@ -11,7 +11,7 @@ export default function App() {
     const token = localStorage.getItem("accessToken");
     if (!token) return;
 
-    axios.post('/api/auth/',
+    axios.post('http://localhost:8000/api/auth/',
       {},
       {
         headers: {

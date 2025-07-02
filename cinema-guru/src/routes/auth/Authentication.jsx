@@ -22,7 +22,6 @@ import axios from 'axios';
 			localStorage.setItem('accessToken', token)
 			setUserUsername(username);
 			setIsLoggedIn(true);
-			console.log("axios fini")
 		} catch(err) {
 			console.error(err);
 		}
