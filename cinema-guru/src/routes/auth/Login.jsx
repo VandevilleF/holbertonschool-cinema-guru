@@ -5,9 +5,6 @@ import Button from '../../components/general/Button'
 import Input from '../../components/general/Input'
 
 export default function Login({ username, password, setUsername, setPassword }) {
-	const handleSubmit = (event) => {
-		event.preventDefault()
-	}
 	return (
 		<>
 		<h3>Sign in with your account</h3>
@@ -18,7 +15,8 @@ export default function Login({ username, password, setUsername, setPassword }) 
 		className="input_content" value={ password }
 		setValue={ setPassword } icon={faKey} />
 		<Button label="Sign In" className="auth_button"
-		onClick={handleSubmit} icon={faKey} />
+		icon={faKey}
+		type ="submit" />
 		</>
 	)
 };

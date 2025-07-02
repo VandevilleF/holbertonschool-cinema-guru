@@ -5,9 +5,6 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 export default function Register({ username, password, setUsername, setPassword }) {
-const handleSubmit = (event) => {
-		event.preventDefault()
-	}
 	return (
 		<>
 		<h3>Create a new account</h3>
@@ -18,7 +15,8 @@ const handleSubmit = (event) => {
 		className="input_content" value={ password }
 		setValue={ setPassword } icon={faKey} />
 		<Button label="Sign Up" className="auth_button"
-		onClick={handleSubmit} icon={faKey} />
+		icon={faKey}
+		type ="submit" />
 		</>
 	)
 };
