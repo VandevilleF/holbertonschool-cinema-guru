@@ -1,0 +1,31 @@
+.navbar_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 3rem;
+	width: 100vw;
+	padding: 0;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+}
+
+.navbar img {
+	border-radius: 50rem;
+	border: solid 2px #BB000E;
+	height: 2rem;
+}
+
+.navbar span {
+	display: flex;
+	align-items: center;
+	color: #BB000E;
+	padding: 1rem;
+}
+
+.navbar_title {
+	padding: 0.25rem;
+	margin: 0;
+}
