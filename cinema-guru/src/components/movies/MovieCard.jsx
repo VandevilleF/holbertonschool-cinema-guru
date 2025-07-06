@@ -40,7 +40,7 @@ export default function MovieCard({ movie }) {
 		fetchList();
 	}, [movie]);
 
-	const handleClick = (type) => {
+	const handleClick = async (type) => {
 		if (!movie?.imdbId) return;
 
 		const token = localStorage.getItem('accessToken');
