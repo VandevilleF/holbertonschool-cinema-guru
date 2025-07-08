@@ -1,0 +1,95 @@
+.movie_card {
+	width: 18rem;
+	height: 25rem;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.searchbar {
+	position: relative;
+	flex-direction: column;
+	top: 3rem;
+	left: 5rem;
+	padding-bottom: 3rem;
+}
+
+.specfic_filter {
+	display: flex;
+}
+
+.filter {
+	padding: 0.5rem;
+}
+
+.movie_info {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+}
+
+.movie_info h3 {
+	background-color: rgba(128, 128, 128, 0.8);
+	position: absolute;
+	bottom: 6rem;
+	font-weight: 400;
+	left: 0;
+	right: 0;
+	margin: 0;
+	z-index: 1;
+	padding: 0 0.5rem;
+}
+
+.movie_info img {
+	width: 100%;
+	height: 15rem;
+	object-fit: cover;
+	display: block;
+}
+
+.informations {
+	height: 6rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.informations p {
+	font-size: 11px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	overflow: hidden;
+}
+
+.icons {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	top: 1.5rem;
+	right: 0.5rem;
+	z-index: 2;
+}
+
+.movie_genres {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	justify-content: center;
+}
+
+.genre {
+	list-style: none;
+	background-color: #BB000E;
+	color: white;
+	font-size: 0.75rem;
+	padding: 0.1rem 0.6rem;
+	border-radius: 20px;
+}

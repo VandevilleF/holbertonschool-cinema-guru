@@ -1,7 +1,23 @@
 .header {
 	display: flex;
 	position: fixed;
-	width: 100vw;
-	height: 10rem;
+	width: 100%;
 	top: 0;
+}
+
+.movie_card {
+	list-style: none;
+	padding: 2rem;
+}
+
+.display_movies {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.load_button {
+	display: flex;
+	position: relative;
+	left: 5.5rem;
 }

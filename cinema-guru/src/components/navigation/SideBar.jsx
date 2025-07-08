@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder, faStar, faClock } from '@fortawesome/free-solid-svg-icons'
 import Activity from '../Activity'
+import axios from 'axios'
 
 export default function SideBar() {
 	const [selected, setSelected] = useState("home");
@@ -16,7 +17,7 @@ export default function SideBar() {
 		setSelected(pageName);
 		switch(pageName) {
 			case "Home":
-				navigate("//home");
+				navigate("/home");
 				break;
 			case "Favorites":
 				navigate("/favorites");
@@ -29,7 +30,14 @@ export default function SideBar() {
 		}
 	}
 	useEffect(() => {
-		axios.get('http://localhost:8000/api/activity')
+		const token = localStorage.getItem('accessToken');
+		if (!token) return;
+
+		axios.get('http://localhost:8000/api/activity', {
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
 		.then((response) => {
 			setActivities(response.data);
 		})
@@ -40,17 +48,19 @@ export default function SideBar() {
 
 	return (
 		<>
-		<nav className='sidebar'>
+		<nav className={`sidebar ${small ? 'small' : ''}`}
+		onMouseEnter={() => setSmall(false)}
+		onMouseLeave={() => setSmall(true)}>
 			<ul className='navigation'>
-				<li className='page' onClick={() => setPage("Home")}>
+				<li className={`page ${selected === 'Home' ? 'active' : ''}`} onClick={() => setPage("Home")}>
 					<span><FontAwesomeIcon icon={ faFolder } /></span>
 					<p>Home</p>
 				</li>
-				<li className='page' onClick={() => setPage("Favorites")}>
+				<li className={`page ${selected === 'Favorites' ? 'active' : ''}`} onClick={() => setPage("Favorites")}>
 					<span><FontAwesomeIcon icon={ faStar } /></span>
 					<p>Favorites</p>
 				</li>
-				<li className='page' onClick={() => setPage("Watch Later")}>
+				<li className={`page ${selected === 'Watch Later' ? 'active' : ''}`} onClick={() => setPage("Watch Later")}>
 					<span><FontAwesomeIcon icon={ faClock } /></span>
 					<p>Watch Later</p>
 				</li>

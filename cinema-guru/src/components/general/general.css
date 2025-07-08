@@ -9,7 +9,6 @@
 .label_block {
 	display: flex;
 	align-self: flex-start;
-	margin-left: 3.5rem;
 }
 
 span {

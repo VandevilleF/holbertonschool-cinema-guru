@@ -69,23 +69,31 @@ export default function MovieCard({ movie }) {
 			console.error(error);
 		}
 	}
+
 	return (
-		<>
 		<li className='movie_card'>
 			<div className='icons'>
 				<FontAwesomeIcon onClick={() => handleClick("watchlater")} icon={ faClock } />
 				<FontAwesomeIcon onClick={() => handleClick("favorite")} icon={ faStar } />
 			</div>
 			<div className='movie_info'>
-				<p>{movie.title}</p>
-				<p>{movie.synopsis}</p>
-				<ul className='movie_genres'>
-					{movie.genres.map((genre, index) => (
-						<li key={index} className='genre'>{genre}</li>
-					))}
-				</ul>
+				<img src={movie.imageurls?.[0] || '/default_image.png'}
+				alt={movie.title}
+				onError={(e) => {
+					e.target.onerror = null;
+					e.target.src = '/default_image.png';
+				}}
+				/>
+				<div className='informations'>
+					<h3>{movie.title}</h3>
+					<p>{movie.synopsis}</p>
+					<ul className='movie_genres'>
+						{movie.genres.map((genre, index) => (
+							<li key={index} className='genre'>{genre}</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</li>
-		</>
 	)
 }

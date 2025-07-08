@@ -1,0 +1,42 @@
+.sidebar {
+	display: flex;
+	align-items: flex-start;
+	position: fixed;
+	top: 3rem;
+	background-color: #BB000E;
+	height: 100vh;
+	width: 12rem;
+	z-index: 2;
+}
+
+.sidebar.small {
+	width: 3rem;
+	display: flex;
+	text-align: center;
+}
+
+.sidebar.small p {
+	display: none;
+}
+
+.navigation {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 12rem;
+}
+
+.page,
+.page span {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: center;
+	padding: 0.5rem;
+	color: white;
+}
+
+.page:hover,
+.page.active {
+	background-color: red;
+}
