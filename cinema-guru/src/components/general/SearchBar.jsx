@@ -7,6 +7,7 @@ export default function SearchBar({ title, setTitle }) {
 	return (
 	<input type="search"
 	value={ title }
+	placeholder='Search Movies'
 	onChange={ handleInput } />
 	)
 }

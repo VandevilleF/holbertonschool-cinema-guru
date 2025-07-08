@@ -9,7 +9,6 @@ export default function MovieCard({ movie }) {
 	const [isFavorite, setIsFavorite] = useState(false);
 	const [isWatchLater, setIsWatchLater] = useState(false);
 
-
 	useEffect(() => {
 		const fetchList = async() => {
 			const token = localStorage.getItem('accessToken');
@@ -77,7 +76,7 @@ export default function MovieCard({ movie }) {
 				<FontAwesomeIcon onClick={() => handleClick("favorite")} icon={ faStar } />
 			</div>
 			<div className='movie_info'>
-				<img src={movie.imageurls?.[0] || '/default_image.png'}
+				<img src={'/default_image.png'}
 				alt={movie.title}
 				onError={(e) => {
 					e.target.onerror = null;

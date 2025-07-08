@@ -2,6 +2,7 @@
 	display: flex;
 	align-items: flex-start;
 	position: fixed;
+	flex-direction: column;
 	top: 3rem;
 	background-color: #BB000E;
 	height: 100vh;
@@ -15,7 +16,8 @@
 	text-align: center;
 }
 
-.sidebar.small p {
+.sidebar.small p,
+.sidebar.small .activities {
 	display: none;
 }
 
@@ -39,4 +41,25 @@
 .page:hover,
 .page.active {
 	background-color: red;
+}
+
+.activities {
+	list-style: none;
+	margin: 0.25rem;
+	padding: 0.25rem;
+	background-color: #222222;
+}
+
+.activities h3 {
+	display: flex;
+	text-decoration: underline;
+	justify-self: center;
+}
+
+.activities_list {
+	font-size: x-small;
+}
+
+.activities_list span {
+	color: red;
 }

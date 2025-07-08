@@ -7,20 +7,62 @@
 	flex-direction: column;
 }
 
-.searchbar {
-	position: relative;
+.container {
+	display: flex;
+	margin-top: 5rem;
+	width: 100%;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.filter_homepage {
+	display: flex;
 	flex-direction: column;
-	top: 3rem;
-	left: 5rem;
-	padding-bottom: 3rem;
+	flex: 0 0 auto;
+	max-width: 50%;
 }
 
 .specfic_filter {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .filter {
 	padding: 0.5rem;
+}
+
+.tags {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 40%;
+	flex: 0 0 auto;
+}
+
+.tag_filter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	list-style: none;
+	gap: 0.5rem;
+	justify-content: flex-start;
+}
+
+.list_tag {
+	border: #BB000E solid 1px;
+	font-weight: 300;
+	border-radius: 5rem;
+	padding: 0 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.list_tag:hover {
+	cursor: pointer;
+}
+
+.list_tag.selected {
+	background-color: #BB000E;
 }
 
 .movie_info {

@@ -4,6 +4,7 @@ import Filter from '../../components/movies/Filter'
 import MovieCard from '../../components/movies/MovieCard'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Tag from '../../components/movies/Tag'
 
 export default function HomePage() {
 	const [movies, setMovies] = useState([]);
@@ -57,7 +58,7 @@ export default function HomePage() {
 				maxYear={maxYear} setMaxYear={setMaxYear}
 				sort={sort} setSort={setSort}
 				genres={genres} setGenres={setGenres}
-				title="Search Movies" setTitle={setTitle} />
+				title={title} setTitle={setTitle} />
 			</div>
 			<div className='display_movies'>
 				{movies.map((movie) => <MovieCard key={movie.imdbId} movie={movie} />)}
