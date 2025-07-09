@@ -43,3 +43,25 @@
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+.watchlater_page {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.watchlater_page h1 {
+	display: flex;
+	margin: 5rem;
+	border-bottom: #BB000E;
+	border-style: none none solid none;
+}
+
+.watchlater_movie {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

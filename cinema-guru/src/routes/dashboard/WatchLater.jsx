@@ -6,26 +6,30 @@ import axios from 'axios';
 export default function WatchLater() {
 	const [movies, setMovies] = useState([]);
 
-	useEffect(async () => {
+	useEffect(() => {
 		const token = localStorage.getItem('accessToken');
 		if (!token) return;
-		try {
-			const response = await axios.get('http://localhost:8000/api/titles/watchlater/', {
-				headers: {
-					Authorization: `Bearer ${token}`
-				}
-			})
+
+		axios.get('http://localhost:8000/api/titles/watchlater/', {
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
+		.then((response) => {
 			const WatchLaterList = response.data;
 			setMovies(WatchLaterList);
-		} catch (error) {
+		})
+		.catch((error) => {
 			console.error(error);
-		}
+		})
 	})
 
 	return (
-		<div>
+		<div className='watchlater_page'>
 			<h1>Movies you like</h1>
-			{movies.map((movie) => <MovieCard movie={movie} />)}
+			<ul className='watchlater_movie'>
+				{movies.map((movie) => <MovieCard key={movie.imdbId} movie={movie} />)}
+			</ul>
 		</div>
 	)
 }
