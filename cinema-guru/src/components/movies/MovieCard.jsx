@@ -72,11 +72,11 @@ export default function MovieCard({ movie }) {
 	return (
 		<li className='movie_card'>
 			<div className='icons'>
-				<FontAwesomeIcon onClick={() => handleClick("watchlater")} icon={ faClock } />
-				<FontAwesomeIcon onClick={() => handleClick("favorite")} icon={ faStar } />
+				<FontAwesomeIcon className={`iconwatchlater ${isWatchLater ? 'active' : ''}`} onClick={() => handleClick("watchlater")} icon={ faClock } />
+				<FontAwesomeIcon className={`iconfav ${isFavorite ? 'active' : ''}`} onClick={() => handleClick("favorite")} icon={ faStar } />
 			</div>
 			<div className='movie_info'>
-				<img src={'/default_image.png'}
+				<img src={movie.imageurls?.[0] || '/default_image.png'}
 				alt={movie.title}
 				onError={(e) => {
 					e.target.onerror = null;

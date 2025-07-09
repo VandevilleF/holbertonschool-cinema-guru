@@ -21,6 +21,10 @@
 	display: none;
 }
 
+.sidebar.small .navigation {
+	width: 3rem;
+}
+
 .navigation {
 	list-style: none;
 	padding: 0;

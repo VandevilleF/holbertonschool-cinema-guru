@@ -4,28 +4,29 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 
 export default function Favorites() {
-	const [movies, setMovies] = useState();
+	const [movies, setMovies] = useState([]);
 
-	const token = localStorage.getItem('accessToken');
-	if (!token) return;
 
-	useEffect(async () => {
-		try {
-			const response = await axios.get('http://localhost:8000/api/titles/favorite/', {
-				headers: {
+	useEffect(() => {
+		const token = localStorage.getItem('accessToken');
+		if (!token) return;
+
+		axios.get('http://localhost:8000/api/titles/favorite/', {
+			headers: {
 					Authorization: `Bearer ${token}`
 				}
-			})
-			favoritesMovies = response.data;
-			setMovies(favoritesMovies);
-		} catch (error) {
-			console.error(error);
-		}
+		})
+		.then((response) => setMovies(response.data))
+		.catch((error) => console.error(error))
 	}, [])
 	return (
-		<div>
-			<h>Movies you like</h>
-			{movies.map((movie) => <MovieCard movie={movie} />)}
+		<div className='fav_page'>
+			<h1>Movies you like</h1>
+			<ul className='favorite_movie'>
+				{movies.map((movie) => (
+					<MovieCard key={movie.imdbId} movie={movie} />
+				))}
+			</ul>
 		</div>
 	)
 }

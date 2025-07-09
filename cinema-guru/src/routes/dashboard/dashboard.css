@@ -21,3 +21,25 @@
 	position: relative;
 	left: 5.5rem;
 }
+
+.fav_page {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.fav_page h1 {
+	display: flex;
+	margin: 5rem;
+	border-bottom: #BB000E;
+	border-style: none none solid none;
+}
+
+.favorite_movie {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
